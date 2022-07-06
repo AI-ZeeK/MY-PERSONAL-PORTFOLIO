@@ -1,0 +1,26 @@
+<?xml version="1.0" standalone="no"?>
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <path fill="#0F62FE" d="M53.3,-41.7C67.5,-24.7,76.3,-2.7,73.5,19.6C70.6,41.8,56.2,64.2,36.2,73C16.2,81.8,-9.3,77,-30.5,65.8C-51.8,54.6,-68.8,37.1,-72.8,17.3C-76.8,-2.5,-67.7,-24.7,-53.4,-41.6C-39.1,-58.6,-19.6,-70.5,0,-70.5C19.6,-70.5,39.2,-58.7,53.3,-41.7Z" transform="translate(100 100)" />
+</svg>
+
+  <svg
+    width="1000" height="1000" viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <filter id="grain" x="-50vw" y="-50vh" width="100vw" height="100vh">
+    <feFlood flood-color="#ffffff" result="neutral-gray" />
+    <feTurbulence in="neutral-gray" type="fractalNoise" baseFrequency="2.5" numOctaves="100" stitchTiles="stitch" result="noise"/>
+    <feColorMatrix in="noise" type="saturate" values="0" result="destaturatedNoise"></feColorMatrix>
+    <feComponentTransfer in="desaturatedNoise" result="theNoise">
+      <feFuncA type="table" tableValues="0 0 0.35 0"></feFuncA>
+    </feComponentTransfer>
+    <feBlend in="SourceGraphic" in2="theNoise" mode="soft-light" result="noisy-image" />
+  </filter>
+      <clipPath id="shape">
+        <path fill="currentColor" d="M882,648Q796,796,648,851.5Q500,907,323.5,880Q147,853,125,676.5Q103,500,169,367.5Q235,235,367.5,162Q500,89,650,144.5Q800,200,884,350Q968,500,882,648Z"></path>
+      </clipPath>
+    </defs>
+    <g filter="url(#grain)" clip-path="url(#shape)">
+      <path fill="#444cf7" d="M882,648Q796,796,648,851.5Q500,907,323.5,880Q147,853,125,676.5Q103,500,169,367.5Q235,235,367.5,162Q500,89,650,144.5Q800,200,884,350Q968,500,882,648Z" />
+    </g>
+  </svg>
+  

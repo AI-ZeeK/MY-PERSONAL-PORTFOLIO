@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!------------------- MAIN CSS ------------------->
+    <link rel="stylesheet" href="CSS/styles.css">
+
+    <!------------------ SWIPER CSS ------------------>
+    <link rel="stylesheet" href="CSS/splide.min.css">
+
+    <!------------------ SWIPER JS ------------------>
+   <script src="JS/splide.min.js" defer></script>
+
+   <!------------ MOVING LETTERS ANIMATION ------------>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js" defer></script>
+
+    <!------------------- MAIN JS ------------------->
+    <script src="JS/script.js" defer></script>
+
+
+    <title>PortFolio </title>
+</head>
+<body>
+    <!-------------------- HEADER -------------------->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="#" class="nav__logo">ISAAC</a>
+
+            <div class="nav__menu" id="navMenu">
+                <ul class="nav__list grid">
+                    <li class="nav__item">
+                        <a href="#home" class="nav__link">
+                            <img class="icons8 nav__icon" src="assets/icons8-home.svg" alt="">Home 
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#about" class="nav__link">
+                            <img src="assets/icons8-user-96.png" alt="" class="icons8 nav__icon">About
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#skills" class="nav__link">
+                            <img src="assets/icons8-skills-96.png" alt="" class="icons8 nav__icon">Skills
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#services" class="nav__link">
+                            <img src="assets/icons8-new-job-96.png" alt="" class="icons8 nav__icon">Services
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#portfolio" class="nav__link">
+                            <img src="assets/icons8-portfolio-96.png" alt="" class="icons8 nav__icon">Portfolio
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#contact" class="nav__link">
+                            <img src="assets/icons8-contact-96.png" alt="" class="icons8 nav__icon">Contact Me
+                        </a>
+                    </li>
+                </ul>
+                <div id="navClose" data-visible="true" class="nav__close">
+                <img src="assets/icons8-close-96.png" alt=""  class="icons8">
+            </div>
+            </div>
+
+            <div class="nav__btns">
+                <!-- theme-togggle-button -->
+                <div src="assets/icons8-moon-symbol-96.png" alt="" id="theme-button" class="icons8 change-theme toggle-image"></div>
+                <div class="nav__toggle" data-visible="false" id="navToggle">
+                    <img src="assets/icons8-dashboard-96.png" alt="" class="icons8-dash">
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!--------------------- MAIN --------------------->
+    <main class="main">
+    <!--------------------- HOME --------------------->
+        <section class="home section" id="home">
+            <div class="home__container container grid">
+                <div class="home__content grid">
+                    <div class="home__social">
+                        <a href="" class="home__social-icon">
+                            <img src="assets/icons8-linkedin-circled.svg" target="_blank" alt="" class="icons8-dash">
+                        </a>
+                        <a href="" class="home__social-icon">
+                            <img src="assets/icons8-dribbble.svg" target="_blank" alt="" class="icons8-dash">
+                        </a>
+                        <a href="" class="home__social-icon">
+                            <img src="assets/icons8-github.svg" target="_blank" alt="" class="icons8-dash">
+                        </a>
+                    </div>
+                    <div class="home__img">
+                        <svg  class="home__blob"  viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                          <filter id="grain" x="-50vw" y="-50vh" width="100vw" height="100vh">
+                        <feFlood flood-color="#ffffff" result="neutral-gray" />
+                        <feTurbulence in="neutral-gray" type="fractalNoise" baseFrequency="2.5" numOctaves="100" stitchTiles="stitch" result="noise"/>
+                        <feColorMatrix in="noise" type="saturate" values="0" result="destaturatedNoise"></feColorMatrix>
+                        <feComponentTransfer in="desaturatedNoise" result="theNoise">
+                          <feFuncA type="table" tableValues="0 0 0.35 0"></feFuncA>
+                        </feComponentTransfer>
+                        <feBlend in="SourceGraphic" in2="theNoise" mode="soft-light" result="noisy-image" />
+                      </filter>
+                          <clipPath id="shape">
+                            <path fill="currentColor" d="M882,648Q796,796,648,851.5Q500,907,323.5,880Q147,853,125,676.5Q103,500,169,367.5Q235,235,367.5,162Q500,89,650,144.5Q800,200,884,350Q968,500,882,648Z"></path>
+                          </clipPath>
+                        </defs>
+                        <g filter="url(#grain)" clip-path="url(#shape)">
+                          <path fill="" d="M882,648Q796,796,648,851.5Q500,907,323.5,880Q147,853,125,676.5Q103,500,169,367.5Q235,235,367.5,162Q500,89,650,144.5Q800,200,884,350Q968,500,882,648Z" />
+                          <image class="home__blob-img" x="12" y="18" style="width:100%" xlink:href="assets/sigmund-a19OVaa2rzA-unsplash.png" />
+                        </g>
+                      </svg>
+
+                    </div>
+                    <div class="home__data">
+                        <h1 class="home__title">Hi, I  am Isaac</h1>
+                        <h3 class="home__subtitle">Frontend developer</h3>
+                        <p class="home__description">Top quality experience in web development knowledge, producing quality work.</p>
+                        <a href="#contact" class="button button--flex">
+                            Contact Me<img class="button__icon icons8-tag icons8" src="assets/icons8-paper-plane-96.png" alt="">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="home__scroll">
+                    <a href="#about" class="home__scroll-button button--flex">
+                        <img class="icons8 home__scroll-mouse" src="assets/icons8-mouse-96.png" alt="">
+                        <span class="home_scroll-name">Scroll down</span>
+                        <img class="icons8 home__scroll-arrow" src="assets/icons8-thick-arrow-pointing-down-96.png" alt="">
+                    </a>
+                </div>
+            </div>
+        </section>
+        <!-------------------------- ABOUT  -------------------------->
+        <section class="about section" id="about">
+            <h2 class="section__title">About Me</h2>
+            <span class="section__subtitle">My Introduction</span>
+
+            <div class="about__container container grid">
+                <img src="assets/jeffery-erhunse-BQMZ5ligqps-unsplash.jpg" alt="" class="about__img">
+                <div class="about__data">
+                    <p class="about__description">I'm a self-taught front-end developer with extensive knowledge and technical skills, working in web technologies, whilst always delivering top quality projects</p>
+                    <div class="about__info">
+                        <div>
+                            <span class="about__info-title">1+</span>
+                            <span class="about__info-name"> years <br> experience</span>
+                        </div>
+                    </div>
+                    <div class="about__buttons">
+                        <a download="" href="" class="button button-flex">
+                            Download CV <img class="icons8 button__icon" src="assets/icons8-download-96.png" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ----------------------- SKILLS ----------------------- -->
+        <section class="skills section" id="skills">
+            <h2 class="section__title">Skills</h2>
+            <span class="section__subtitle">My technical level</span>
+
+            <div class="skills__container grid container">
+                <!-----------------------  SKILLS  ----------------------->
+                <div class="skills__content">
+                    <div class="skills__header" id="skillsHeader">
+                        <img src="assets/icons8-curly-brackets-96.png" alt="" class="icons8 skills__icon">
+
+                        <div>
+                            <h1 class="skills__title">Frontend developer</h1>
+                            <span class="skills__subtitle">More than 9 months</span>
+                        </div>
+                        <img src="assets/icons8-double-down-96.png" alt="" id="skillsArrow" class="icons8 skills__arrow">
+                    </div>
+                        <div class="skills__list grid ">
+                            <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills__name">HTML5</h3>
+                                    <span class="skills__number">90%</span>
+                                </div>
+                                <div class="skills__bar">
+                                    <span class="skills__percentage skills__html"></span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="skills__list grid">
+                            <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills__name">CSS3</h3>
+                                    <span class="skills__number">80%</span>
+                                </div>
+                                <div class="skills__bar">
+                                    <span class="skills__percentage skills__css"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skills__list grid">
+                            <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills__name">SASS</h3>
+                                    <span class="skills__number">60%</span>
+                                </div>
+                                <div class="skills__bar">
+                                    <span class="skills__percentage skills__scss"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="skills__list grid">
+                            <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills__name">JavaScript</h3>
+                                    <span class="skills__number">55%</span>
+                                </div>
+                                <div class="skills__bar">
+                                    <span class="skills__percentage skills__js"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skills__list grid">
+                            <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills__name">React</h3>
+                                    <span class="skills__number">20%</span>
+                                </div>
+                                <div class="skills__bar">
+                                    <span class="skills__percentage skills__react"></span>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </section>
+        <!-- ------- ------- ---------- SERVICES ------- ------- ---------- -->
+
+        <section class="services section" id="services">
+            <h2 class="section__title">Services</h2>
+            <span class="section__subtitle">What i offer</span>
+
+            <div class="services__container container grid">
+                <!-- SERVICES  1-->
+                <div class="services__content">
+                    <div>
+                        <img src="assets/icons8-web-grid-96.png" alt="" class="icons8 services__icon">
+                        <h3 class="services__title">FrontEnd Developer</h3>
+                    </div>
+                    <span id="openModal" class="button button--flex button--small button--link services__button">
+                        View More 
+                        <img src="assets/icons8-arrow-96.png" alt="" class="button__icon icons8">
+                    </span>
+
+                    <div class="services__modal modal-inactive" id="modal">
+                        <div class="services__modal-content">
+                            <h4 class="services__modal-title">Front End Dev</h4>
+                            <img id="closeModal" src="assets/icons8-close-96.png" alt="" class="icons8 services__modal-close">
+
+                            <ul class="services__modal-services grid">
+                                <li class="services__modal-service">
+                                    <img src="assets/icons8-checkmark-96.png" alt="" class="icons8 services__modal-icon">
+                                    <p>I develop the user interface</p>
+                                </li>
+                                <li class="services__modal-service">
+                                    <img src="assets/icons8-checkmark-96.png" alt="" class="icons8 services__modal-icon">
+                                    <p>I develop the web page</p>
+                                </li>
+                                <li class="services__modal-service">
+                                    <img src="assets/icons8-checkmark-96.png" alt="" class="icons8 services__modal-icon">
+                                    <p>I develop the Dashboard interface</p>
+                                </li>
+                                <li class="services__modal-service">
+                                    <img src="assets/icons8-checkmark-96.png" alt="" class="icons8 services__modal-icon">
+                                    <p>I develop the user interface</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--------------------------- PORTFOLIO --------------------------->
+        <section class="portfolio section" id="portfolio">
+            <h2 class="section__title">Portfolio</h2>
+            <span class="section__subtitle">Most recent</span>
+
+            <div class="container  portfolio__container ">
+                <div class="splide">
+                    <div class="splide__track">
+                      <ul class="splide__list">
+                        <li class="splide__slide portfolio__block">
+                            <div class="portfolio__content grid">
+                                <img src="assets/Site1.png" alt="" class="portfolio__img">
+
+                            <div class="portfolio__data">
+                                <h3 class="portfolio__title">Analogue/Digital Clock</h3>
+                                <p class="portfolio__description">Website adaptable to all devices,Light and dark mode toggle</p>
+                                <a href="#" class="button button--flex button--small portfolio__button">
+                                Demo 
+                                <img src="assets/icons8-right-96.png" alt="" class="icons8 button__icon">
+                                </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="splide__slide">Slide 01</li>
+                        <li class="splide__slide">Slide 01</li>
+                        <li class="splide__slide">Slide 01</li>
+                        <li class="splide__slide">Slide 01</li>
+                      </ul>
+                    </div>
+                    
+                    <!-- Add the progress bar element -->
+                    <div class="my-slider-progress">
+                      <div class="my-slider-progress-bar"></div>
+                    </div>
+                  </div>
+            
+                </div>
+        </section>
+
+        <!------------------------- PROJECT IN MIND ------------------------->
+        <section class="project section">
+            <div class="project__bg">
+                <div class="project__container container grid">
+                    <div class="project__data">
+                        <h2 class="project__title">You have a new project</h2>
+                        <p class="project__description">Contact me now and get a 20% discount on your new Frontend projects</p>
+                        <a href="#contact" class="button button--flex button--white">
+                            Contact me  
+                            <img src="assets/icons8-paper-plane-96.png" alt=""  class="icons8 project__icon button__icon">
+                        </a>
+                    </div>
+                    <img class="project__img" src="assets/jeffery-erhunse-BQMZ5ligqps-unsplash.jpg" alt="">
+                </div>
+            </div>
+        </section>
+        <!------------------------- CONTACT ME ------------------------->
+        <section class="contain section" id="contact">
+            <h2 class="section__title">Contact Me</h2>
+            <span class="section__subtitle">Get in touch</span>
+
+            <div class="contact__container container grid">
+                <div>
+                    <div class="contact__information">
+                        <img src="assets/icons8-phone-96.png" alt="" class="icons8 contact__icon">
+
+                        <div>
+                            <h3 class="contact__title">Call Me</h3>
+                            <span class="contact__subtitle">999-777-666</span>
+                        </div>
+                    </div>
+                    <div class="contact__information">
+                        <img src="assets/icons8-new-message-96.png" alt="" class="icons8 contact__icon">
+
+                        <div>
+                            <h3 class="contact__title">Email </h3>
+                            <span class="contact__subtitle">Isaac@gmail.com</span>
+                        </div>
+                    </div>
+                    <div class="contact__information">
+                        <img src="assets/icons8-address-96.png" alt="" class="icons8 contact__icon">
+
+                        <div>
+                            <h3 class="contact__title">Location</h3>
+                            <span class="contact__subtitle"> 173 abuloma rd. Port-Harcourt, Nigeria</span>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact__form grid">
+                    <div class="contact__inputs grid">
+                        <div class="contact__content">
+                            <label for="" class="contact__label">Name</label>
+                            <input type="text" class="contact__input">
+                        </div>
+                        <div class="contact__content">
+                            <label for="" class="contact__label">Email</label>
+                            <input type="email" class="contact__input">
+                        </div>
+                    </div>
+                    <div class="contact__content">
+                        <label for="" class="contact__label">Message</label>
+                        <textarea name="" id="" rows="7" cols="0" class="contact__input"></textarea>
+                    </div>
+                    <div>
+                        <a href="" class="button button--flex">
+                            Send Message
+                            <img src="assets/icons8-paper-plane-96.png" alt=""  class="icons8 button__icon">
+                        </a>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!------------------------------- FOOTER  ------------------------------->
+
+    <footer class="footer">
+        <div class="footer__bg">
+            <div class="footer__container container grid">
+                <div>
+                    <h1 class="footer__title">ISAAC</h1>
+                    <span class="footer__subtitle">Frontend developer</span>
+                </div>
+
+                <ul class="footer__links">
+                    <li>
+                        <a href="#services" class="footer__link">Services</a>
+                    </li>
+                    <li>
+                        <a href="#portfolio" class="footer__link">Portfolio</a>
+                    </li>
+                    <li>
+                        <a href="#contact" class="footer__link">Contact Me</a>
+                    </li>
+                </ul>
+
+                <div class="footer__socials">
+                    <a href="" class="footer__social" target="_blank">
+                        <img src="assets/icons8-facebook.svg" alt="" class="icons8">
+                    </a>
+                    <a href="" class="footer__social" target="_blank">
+                        <img src="assets/icons8-instagram.svg" alt="" class="icons8">
+                    </a>
+                    <a href="" class="footer__social" target="_blank">
+                        <img src="assets/icons8-twitter.svg" alt="" class="icons8">
+                    </a>
+                </div>
+                
+            </div>
+            <p class="footer__copy">&#169; Bedimcode . All rights reserved</p>
+        </div>
+    </footer>
+
+    <!------------------------ SCROLL UP ------------------------>
+    <a href="#" class="scrollup" id="scroll-up">
+        <img src="assets/icons8-collapse-arrow-96.png" alt="" class="icons8 scrollup__icons">
+    </a>
+
+</body> 
+</html>
